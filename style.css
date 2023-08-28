@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+}
+
+nav {
+  background-color: orangered;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: rgb(214, 214, 214);
+}
