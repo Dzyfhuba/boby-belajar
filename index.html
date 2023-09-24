@@ -19,8 +19,56 @@
     </div>
   </nav>
   <main>
-    Beranda
+    <h1>Beranda</h1>
+
+
+    <div class="">
+      <button id="counter-trigger-decrement">Kurang</button>
+      <button id="counter-trigger">Tambah</button>
+    </div>
+    <div id="counter">counter: <span>0</span></div>
+
+
   </main>
+
+
+  <script>
+    // 1
+    const button = document.querySelector('#counter-trigger')
+    let counter = 0
+    console.log(`counter: ${counter}`)
+    console.log('counter: ' + counter)
+
+    // 2
+    const place = document.querySelector('#counter>span')
+    console.log(place)
+
+    // 3
+    button.addEventListener('click', function () {
+      counter++
+      console.log(`counter: ${counter}`)
+      place.innerHTML = counter
+
+      gantiWarna(counter)
+    })
+
+    // 4
+    const buttonDecrement = document.querySelector('#counter-trigger-decrement')
+    buttonDecrement.addEventListener('click', () => {
+      counter--
+      console.log(`counter: ${counter}`)
+      place.innerHTML = counter
+
+      gantiWarna(counter)
+    })
+
+    // function gantiWarna(counter) {
+    const gantiWarna = (counter) => {
+      const navbar = document.querySelector('nav')
+
+      navbar.style.backgroundColor = counter % 2 ? 'green' : 'orangered'
+    }
+  </script>
 </body>
 
 </html>
